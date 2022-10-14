@@ -1,6 +1,6 @@
 .leaflet-container {
     position: fixed !important;
-    overflow: hidden;
+    overflow: unset !important;
     height: 100%;
     width: 100%;
 }

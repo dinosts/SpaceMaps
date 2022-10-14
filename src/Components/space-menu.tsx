@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
     AppBar, Avatar, Box,
-    Button,
+    Button, Grid,
     Toolbar,
     Typography,
 } from "@mui/material";
@@ -25,25 +25,35 @@ interface PinData {
 
 
 function SpaceMenu() {
+
+    // breaks at width 756
+    //
     return (
         <AppBar >
             <Toolbar sx={{ background: 'white', color:'#54a5f7'}}>
-                <Box>
-                    <Button>
-                        <ArrowBack /> Back to HomePage
-                    </Button>
-                </Box>
-                <div style={{flexGrow: 1, display: 'contents' , padding: '0.1rem', textAlign: 'start' }}>
-                    <Avatar src={logo}/>
-                    <Typography>Konstantinos</Typography>
-                </div>
-                <Typography
-                    variant="h6"
-                    component="div"
-                    sx= {{ flexGrow: 1,textAlign: 'end',}}
-                >
-                    SpaceTime Maps 🚩
-                </Typography>
+                <Grid container spacing={3} justifyContent="space-between" alignItems="center" sx={{marginTop:'0px !important'}}>
+                    <Grid sm={3} sx={{textAlign:'start'}}>
+                        <Button>
+                            <ArrowBack /> Back to HomePage
+                        </Button>
+                    </Grid>
+                    <Grid sm={6} sx={{display: 'contents', textAlign:'center'}} >
+                        <Button sx={{background:'#e8eedc'}}>
+                            <Avatar src={logo}/>
+                            <Typography >Konstantinos</Typography>
+                        </Button>
+                    </Grid>
+                    <Grid sm={3}>
+                        <Typography
+                            variant="h6"
+                            component="div"
+                            sx= {{ flexGrow: 1, textAlign: 'end' }}
+                        >
+                            SpaceTime Maps 🚩
+                        </Typography>
+                    </Grid>
+                </Grid>
+
             </Toolbar>
         </AppBar>
     );

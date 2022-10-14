@@ -1,11 +1,10 @@
 import SpaceMenu from "../Components/space-menu";
 import SpaceMap from "../Components/space-map";
 import React from "react";
+import { Grid} from "@mui/material";
 
 
 function MapsPage() {
-
-
     const [pins, setPins] = React.useState([
         {
             lat:40.636494,
@@ -26,11 +25,16 @@ function MapsPage() {
 
 
     return (
-        <div>
-            <SpaceMenu />
-            <SpaceMap generatePins={pins}/>
+            <Grid gridRow={1} sx={{ width:'100%', height:'100%' }}>
+                <Grid sm={12}>
+                <SpaceMenu />
+                </Grid>
 
-        </div>
+                <Grid sm={12}>
+                <SpaceMap generatePins={pins}/>
+                </Grid>
+
+            </Grid>
     )
 }
     export default MapsPage;
