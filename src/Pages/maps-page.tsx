@@ -2,6 +2,7 @@ import SpaceMenu from "../Components/space-menu";
 import SpaceMap from "../Components/space-map";
 import React from "react";
 import { Grid} from "@mui/material";
+import MarkerFilteringPanel from "../Components/marker-filtering-panel";
 
 
 function MapsPage() {
@@ -27,11 +28,14 @@ function MapsPage() {
     return (
             <Grid gridRow={1} sx={{ width:'100%', height:'100%' }}>
                 <Grid sm={12}>
-                <SpaceMenu />
+                    <SpaceMenu />
                 </Grid>
 
                 <Grid sm={12}>
-                <SpaceMap generatePins={pins}/>
+                    <SpaceMap generatePins={pins}/>
+                </Grid>
+                <Grid sm={12}>
+                    <MarkerFilteringPanel />
                 </Grid>
 
             </Grid>

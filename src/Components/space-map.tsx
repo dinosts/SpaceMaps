@@ -36,7 +36,7 @@ function SpaceMap(props: Props) {
 
     return (
             <MapContainer {...{center: THESSALONIKI_POSITION, zoom:6, scrollWheelZoom:false, zoomControl: false,}}>
-                <ZoomControl position="bottomleft"/>
+                <ZoomControl position="topright" />
                 <TileLayer  {...{attribution:'\'&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors', url:"https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png", maxZoom: 19,  }}/>
                 <MarkerClusterGroup >
                     {props.generatePins.map((pinData) => createMarker(pinData))}

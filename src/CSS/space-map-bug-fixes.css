@@ -4,3 +4,12 @@
     height: 100%;
     width: 100%;
 }
+
+.leaflet-control {
+    margin-top: 80px !important;
+}
+
+.leaflet-control-attribution {
+    margin-bottom: 10px !important;
+    margin-left: 99px !important;
+}
