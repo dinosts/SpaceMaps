@@ -39,7 +39,7 @@ function SpaceMenu() {
                     </Grid>
                     <Grid sm={6} sx={{display: 'contents', textAlign:'center'}} >
                         <Button sx={{background:'#e8eedc'}}>
-                            <Avatar src={logo}/>
+                            <Avatar src={'https://lh6.googleusercontent.com/-UYKv4Oo4AL4/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reOcBoiruxfuiRHs8VAoE-HvgnBDw/mo/photo.jpg?sz=256'}/>
                             <Typography >Konstantinos</Typography>
                         </Button>
                     </Grid>
