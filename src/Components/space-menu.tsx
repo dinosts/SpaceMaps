@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import {
-    AppBar, Avatar,
+    AppBar,
     Button, Grid, SwipeableDrawer,
     Toolbar,
     Typography,
@@ -9,6 +9,7 @@ import {
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import DehazeIcon from '@mui/icons-material/Dehaze';
+import '../CSS/space-menu-fixes.css'
 
 function SpaceMenu() {
     const [needsDrawer, setNeedsDrawer] = React.useState<boolean>(false)
@@ -84,8 +85,6 @@ function SpaceDrawer(){
     return (<React.Fragment key={'left'}>
         <Button onClick={toggleDrawer(true)}
                 sx={{
-                    background:'white',
-                    borderRadius:'100%',
                     width:'55px',
                     height:'55px',
                     textAlign:'end'
