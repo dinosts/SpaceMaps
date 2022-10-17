@@ -28,9 +28,7 @@ function SpaceMap(props: Props) {
         shadowUrl: iconShadow
     });
 
-
     L.Marker.prototype.options.icon = DefaultIcon;
-
 
     const THESSALONIKI_POSITION : L.LatLngExpression = [40.629269,22.947412]
 
@@ -38,9 +36,9 @@ function SpaceMap(props: Props) {
             <MapContainer {...{center: THESSALONIKI_POSITION, zoom:6, scrollWheelZoom:false, zoomControl: false,}}>
                 <ZoomControl position="topright" />
                 <TileLayer  {...{attribution:'\'&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors', url:"https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png", maxZoom: 19,  }}/>
-                <MarkerClusterGroup >
-                    {props.generatePins.map((pinData) => createMarker(pinData))}
-                </MarkerClusterGroup>
+                    <MarkerClusterGroup >
+                        {props.generatePins.map((pinData) => createMarker(pinData))}
+                    </MarkerClusterGroup>
             </MapContainer>
     );
 }

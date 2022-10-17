@@ -6,7 +6,7 @@ function MarkerFilteringPanel() {
             position: 'fixed',
             height: '40px',
             padding:'10px',
-            top:'80px',
+            marginTop:'80px',
             background:'white',
             borderRadius:'5%',
             borderColor:'black',

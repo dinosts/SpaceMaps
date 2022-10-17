@@ -12,4 +12,5 @@
 .leaflet-control-attribution {
     margin-bottom: 10px !important;
     margin-left: 99px !important;
+    width: 100% !important;
 }
